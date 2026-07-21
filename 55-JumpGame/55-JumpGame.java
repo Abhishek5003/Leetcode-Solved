@@ -1,0 +1,15 @@
+// Last updated: 7/21/2026, 5:02:09 PM
+class Solution {
+    public boolean canJump(int[] nums) {
+        int finalPos = nums.length-1;
+        for(int i = nums.length-2; i >= 0; i--){
+            if(i + nums[i] >= finalPos){
+                finalPos = i;
+            }
+        }   
+        if(finalPos == 0){
+            return true;
+        }
+        return false;
+    }
+}
